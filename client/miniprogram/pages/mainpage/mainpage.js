@@ -5,79 +5,57 @@ Page({
    * 页面的初始数据
    */
   data: {
-    curIndex: -1,
+    curIndex: 0,
     list:[
       {
+        id:"0",
+        state:1,
         name:"VR/AR",
         imgurl:"/images/vrar.png"
       },
       {
+        id:"1",
+        state:0,
         name:"游戏开发",
         imgurl:"/images/gamedevelop.png"
       },
+      // {
+      //   name:"游戏策划",
+      //   imgurl:"/images/gamedesign.png"
+      // },
       {
-        name:"游戏策划",
-        imgurl:"/images/gamedesign.png"
-      },
-      {
+        id:"2",
+        state:0,
         name:"APP开发",
         imgurl:"/images/mobileapp.png"
       },
+      // {
+      //   name:"APP设计",
+      //   imgurl:"/images/appdesign.png"
+      // },
       {
-        name:"APP设计",
-        imgurl:"/images/appdesign.png"
-      },
-      {
+        id:"3",
+        state:0,
         name:"微信mini",
         imgurl:"/images/wechatmini.png"
       },
       
 
     ],
-    tabList:[
-      {
-        id:"0",
-        state:0,
-        name:'VR/AR',
-      },
-      {
-        id:"1",
-        state:0,
-        name:'游戏开发',
-      },
-      {
-        id:"2",
-        state:0,
-        name:'游戏策划',
-      },
-      {
-        id:"3",
-        state:0,
-        name:'APP开发',
-      },{
-        id:"4",
-        state:0,
-        name:'APP设计',
-      },
-      {
-        id:"5",
-        state:0,
-        name:'微信mini',
-      },
-       
-    ]
+  
   },
 
   selected: function (e) { 
-    var id = e.target.id;
+    console.log(e)
+    var id = e.currentTarget.id;
     var nId = parseInt(id);
-    var tmp = this.data.tabList;
+    var tmp = this.data.list;
     if(this.data.curIndex != -1) {
       tmp[this.data.curIndex].state = 0;
     }
     tmp[nId].state = 1;
     this.setData({
-      tabList:tmp,
+      list:tmp,
       curIndex:nId
     });
   },

@@ -24,9 +24,10 @@
 .list{
   border-top:1px solid #EDEDED; 
   display: flex;
-  justify-content: flex-start;  
+  justify-content: space-between;  
   flex-wrap:wrap;
   box-sizing: content-box;
+  width: 90%;
   padding-left: 5%;
 }
 
@@ -66,8 +67,6 @@
   color: #333;
   padding-top: 10px;
 }
-
-
 image {
   width: 60px;
   height:60px;
@@ -81,7 +80,8 @@ image {
 }
 
 .underline{ 
-  border-bottom: 1px solid #333;
+  padding-bottom: 1px;
+  border-bottom: 1rpx solid #333;
 }
 
 

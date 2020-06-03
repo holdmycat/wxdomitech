@@ -22,9 +22,10 @@
     <view class='list'>
       <view class='item' wx:for="{{list}}">
 
-        <view class = 'price'>
+        <view class = 'price' bindtap='selected' id = "{{item.id}}">
         <image style='width:40px;height:40px' src='{{item.imgurl}}'></image>  
-        <text class ='font'>{{item.name}}</text>  
+        <!-- <text class ='font'>{{item.name}}</text>   -->
+        <view class="{{item.state?'underline':'default'}}, font2" >{{item.name}}</view>
         </view>   
       </view> 
     </view>
@@ -33,7 +34,7 @@
 
 <!--  tab页 -->
 <!-- tabList -->
-<view class='container' style=" padding-top:10px;padding-bottom:10px;">
+<!-- <view class='container' style=" padding-top:10px;padding-bottom:10px;">
   <view class='list2'>
     <view class='item' wx:for="{{tabList}}">
         <view class = 'price'>
@@ -42,13 +43,8 @@
     </view>
   </view>
 
-  <!-- <view class="{{selected1?'show':'hidden'}}">
-      222
-  </view>
-  <view class="{{selected2?'show':'hidden'}}">
-      333
-  </view> -->
-</view>
+</view> -->
+
 
   
  
