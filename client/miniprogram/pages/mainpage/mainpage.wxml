@@ -1,0 +1,48 @@
+  <!-- 标题 -->
+  <view >
+    <!-- 横向图标 + 文字描述 -->
+    <view class="layout_horizontal" style="padding-bottom:20px;">
+      <view class = "image">
+      <image  src='/images/logo-512.png' mode="aspectFit"></image>
+      </view>
+      <view class = "image, .td">
+        <text style='font-size: 20px; padding-top:15px'>DOMITECH</text>
+      </view>
+    </view>
+
+   
+  </view>
+
+
+
+
+
+  <!-- 产皮品类 -->
+  <view>
+    <view class='list'>
+      <view class='item' wx:for="{{list}}">
+
+        <view class = 'price'>
+        <image style='width:40px;height:40px' src='{{item.imgurl}}'></image>  
+        <text class ='font'>{{item.name}}</text>  
+        </view>   
+      </view> 
+    </view>
+  </view>
+
+
+  <!--  tab页 -->
+
+<view class='container'>
+  <view class='tab'>
+    <view class="{{selected?'red':'default'}}" bindtap='selected'>烟花</view>
+    <view class="{{selected1?'red':'default'}}" bindtap='selected1'>鞭炮</view>
+    <view class="{{selected2?'red':'default'}}" bindtap='selected2'>小产品</view>
+  </view>
+
+</view>
+  
+ 
+  
+   
+  
