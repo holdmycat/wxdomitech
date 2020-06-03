@@ -5,6 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    curIndex: -1,
     list:[
       {
         name:"VR/AR",
@@ -33,7 +34,55 @@ Page({
       
 
     ],
+    tabList:[
+      {
+        id:"0",
+        state:0,
+        name:'VR/AR',
+      },
+      {
+        id:"1",
+        state:0,
+        name:'游戏开发',
+      },
+      {
+        id:"2",
+        state:0,
+        name:'游戏策划',
+      },
+      {
+        id:"3",
+        state:0,
+        name:'APP开发',
+      },{
+        id:"4",
+        state:0,
+        name:'APP设计',
+      },
+      {
+        id:"5",
+        state:0,
+        name:'微信mini',
+      },
+       
+    ]
   },
+
+  selected: function (e) { 
+    var id = e.target.id;
+    var nId = parseInt(id);
+    var tmp = this.data.tabList;
+    if(this.data.curIndex != -1) {
+      tmp[this.data.curIndex].state = 0;
+    }
+    tmp[nId].state = 1;
+    this.setData({
+      tabList:tmp,
+      curIndex:nId
+    });
+  },
+   
+
 
   /**
    * 生命周期函数--监听页面加载

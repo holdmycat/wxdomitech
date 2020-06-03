@@ -31,18 +31,30 @@
   </view>
 
 
-  <!--  tab页 -->
-
-<view class='container'>
-  <view class='tab'>
-    <view class="{{selected?'red':'default'}}" bindtap='selected'>烟花</view>
-    <view class="{{selected1?'red':'default'}}" bindtap='selected1'>鞭炮</view>
-    <view class="{{selected2?'red':'default'}}" bindtap='selected2'>小产品</view>
+<!--  tab页 -->
+<!-- tabList -->
+<view class='container' style=" padding-top:10px;padding-bottom:10px;">
+  <view class='list2'>
+    <view class='item' wx:for="{{tabList}}">
+        <view class = 'price'>
+        <view class="{{item.state?'underline':'default'}}, font2" bindtap='selected' id = "{{item.id}}">{{item.name}}</view>
+        </view>
+    </view>
   </view>
 
+  <!-- <view class="{{selected1?'show':'hidden'}}">
+      222
+  </view>
+  <view class="{{selected2?'show':'hidden'}}">
+      333
+  </view> -->
 </view>
+
   
  
+
+
+
   
    
   
