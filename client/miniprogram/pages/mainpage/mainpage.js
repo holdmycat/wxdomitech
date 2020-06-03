@@ -40,8 +40,39 @@ Page({
         imgurl:"/images/wechatmini.png"
       },
     ],
+    videoItemInfo:{
+      width:0,
+      height:0
+    },
+    
+    videoList:[
+      {
+        id:"0",
+      },
+      {
+        id:"1",
+      },
+      {
+        id:"2",
+      },
+      {
+        id:"3",
+      },
+      {
+        id:"0",
+      },
+      {
+        id:"1",
+      },
+      {
+        id:"2",
+      },
+      {
+        id:"3",
+      },
+    ]
   },
-  
+
   selected: function (e) { 
     var id = e.currentTarget.id;
     var nId = parseInt(id);
@@ -56,13 +87,23 @@ Page({
     });
   },
    
-
-
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    var _this = this;
+    var app = getApp()
+    console.log(app.globalData.windowWidth);
+    var tmp = this.data.videoItemInfo;
+    
+    tmp.width = app.globalData.windowWidth * 0.88 * 0.5;
+    tmp.height = tmp.width * 1.3;
+    this.setData({
+      videoItemInfo:tmp
+    })
    
+    console.log(this.data.videoItemInfo.width);
+    
   },
 
   /**

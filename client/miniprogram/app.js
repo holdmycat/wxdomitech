@@ -12,9 +12,29 @@ App({
         //   如不填则使用默认环境（第一个创建的环境）
         // env: 'my-env-id',
         traceUser: true,
+        
       })
+      var _this = this;
+      
+
     }
 
-    this.globalData = {}
+    this.globalData = {
+      windowWidth:0,
+      windowHeight:0,
+    }
+
+    wx.getSystemInfo({
+      success:function(res){
+        _this.globalData.windowWidth = res.windowWidth;
+        _this.globalData.windowHeight = res.windowHeight;
+      },
+      fail:function(res){
+
+      },
+      complete:function(res){
+
+      }
+    })
   }
 })
