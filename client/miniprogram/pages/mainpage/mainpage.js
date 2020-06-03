@@ -39,14 +39,10 @@ Page({
         name:"微信mini",
         imgurl:"/images/wechatmini.png"
       },
-      
-
     ],
-  
   },
-
+  
   selected: function (e) { 
-    console.log(e)
     var id = e.currentTarget.id;
     var nId = parseInt(id);
     var tmp = this.data.list;
