@@ -101,9 +101,6 @@ Page({
     this.setData({
       videoItemInfo:tmp
     })
-   
-    console.log(this.data.videoItemInfo.width);
-    
   },
 
   /**
